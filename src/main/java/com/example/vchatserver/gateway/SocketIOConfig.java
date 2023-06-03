@@ -14,7 +14,6 @@ public class SocketIOConfig {
     public SocketIOServer socketIOServer() {
         Configuration config = new Configuration();
         config.setPort(4000);
-        config.setHostname("localhost");
         config.setAuthorizationListener(socketIoAuthorizationInterceptor);
         return new SocketIOServer(config);
     }
