@@ -13,7 +13,7 @@ import java.util.Objects;
 public class Channel extends Group {
     @Getter @Setter
     @NonNull
-    @Column(unique = true)
+    @Column(unique = true, length = 30)
     private String nickname;
 
     @Override

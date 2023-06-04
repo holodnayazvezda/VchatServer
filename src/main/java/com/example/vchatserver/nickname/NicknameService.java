@@ -4,14 +4,11 @@ import com.example.vchatserver.channel.Channel;
 import com.example.vchatserver.channel.ChannelRepository;
 import com.example.vchatserver.user.User;
 import com.example.vchatserver.user.UserRepository;
-import net.bytebuddy.utility.dispatcher.JavaDispatcher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.awt.*;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Objects;
 
 @Service
 public class NicknameService {
@@ -28,7 +25,7 @@ public class NicknameService {
     public int checkNicknameForUser(String nickname) {
         String regex = "^[a-zA-Z0-9_]+$";  // регулярное выражение для проверки
         if (nickname.matches(regex)) {
-            if (nickname.length() >= 5) {
+            if (nickname.length() >= 5 && nickname.length() <= 30) {
                 if (!nickname.matches("[0-9_]+")) {
                     List<User> data = userRepository.findAll();
                     List<String> nicknames = new ArrayList<>();
@@ -48,7 +45,7 @@ public class NicknameService {
     public int checkNicknameForChannel(String nickname) {
         String regex = "^[a-zA-Z0-9_]+$";  // регулярное выражение для проверки
         if (nickname.matches(regex)) {
-            if (nickname.length() >= 5) {
+            if (nickname.length() >= 5 && nickname.length() <= 30) {
                 if (!nickname.matches("[0-9_]+")) {
                     List<Channel> data = channelRepository.findAll();
                     List<String> nicknames = new ArrayList<>();

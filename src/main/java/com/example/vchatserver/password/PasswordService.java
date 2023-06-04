@@ -15,7 +15,7 @@ public class PasswordService {
     public static int matchError = 500;
 
     public static int checkPasswordConditions(String password) {
-        if (password.length() < 8) {
+        if (password.length() < 8 || password.length() > 30) {
             return lengthError;
         }
         if (!password.matches(".*\\d.*")) {

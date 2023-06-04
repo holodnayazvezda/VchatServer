@@ -6,7 +6,6 @@ import lombok.NonNull;
 import lombok.Setter;
 import org.hibernate.annotations.LazyCollection;
 import org.hibernate.annotations.LazyCollectionOption;
-import org.springframework.data.jpa.repository.Query;
 
 import javax.persistence.*;
 import java.time.ZonedDateTime;
@@ -23,6 +22,7 @@ public class Group {
 
     @Getter @Setter
     @NonNull
+    @Column(length = 30)
     private String name;
 
     @Getter @Setter
@@ -54,7 +54,7 @@ public class Group {
     @Getter @Setter
     @Schema(example = "iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAEElEQVR4nGJ6VrQAEAAA//8EQgH7dTCZ8gAAAABJRU5ErkJggg==",
             description = "Base64-encoded avatar image thumbnail", required = true)
-    @Column(name = "IMAGE_DATA", columnDefinition = "LONGTEXT", nullable = false)
+    @Column(name = "IMAGE_DATA", columnDefinition = "LONGTEXT", nullable = false, length = 10000000)
     private String imageData;
 
     @Override

@@ -17836,3 +17836,19 @@ Database is already closed (to disable automatic closing at VM shutdown, add ";D
 	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-06-05 00:05:41 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "CONTENT CHARACTER VARYING(255)": "'stringstringstringstringstringstringstringstringstringstringstringstringstrings... (1296)"
+Value too long for column "CONTENT CHARACTER VARYING(255)": "'stringstringstringstringstringstringstringstringstringstringstringstringstrings... (1296)"; SQL statement:
+insert into vchat_text_message (content, creation_date, message_chat_id, owner_id, id) values (?, ?, ?, ?, ?) [22001-214]
+2023-06-05 00:23:55 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "CONTENT CHARACTER VARYING(255)": "'stringstringstringstringstringstringstringstringstringstringstringstringstrings... (1296)"
+Value too long for column "CONTENT CHARACTER VARYING(255)": "'stringstringstringstringstringstringstringstringstringstringstringstringstrings... (1296)"; SQL statement:
+insert into vchat_text_message (content, creation_date, message_chat_id, owner_id, id) values (?, ?, ?, ?, ?) [22001-214]
+2023-06-05 00:24:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "PASSWORD CHARACTER VARYING(30)": "'$2a$10$8pQ/rPea0Ec7KnoR0kthqu0JnY4wANQIQQd2N2dGtNQsfF7ROnzoq' (60)"
+Value too long for column "PASSWORD CHARACTER VARYING(30)": "'$2a$10$8pQ/rPea0Ec7KnoR0kthqu0JnY4wANQIQQd2N2dGtNQsfF7ROnzoq' (60)"; SQL statement:
+insert into vchat_user (image_data, name, nickname, password, type_of_image, id) values (?, ?, ?, ?, ?, ?) [22001-214]
+2023-06-05 00:25:21 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLDataException: Значение слишком длинное для поля "PASSWORD CHARACTER VARYING(30)": "'$2a$10$fHjsGOOPLOp4lq5s77KRaOYNFBTZTTU.FYsTbDecvS1izrIRCBwBy' (60)"
+Value too long for column "PASSWORD CHARACTER VARYING(30)": "'$2a$10$fHjsGOOPLOp4lq5s77KRaOYNFBTZTTU.FYsTbDecvS1izrIRCBwBy' (60)"; SQL statement:
+insert into vchat_user (image_data, name, nickname, password, type_of_image, id) values (?, ?, ?, ?, ?, ?) [22001-214]
