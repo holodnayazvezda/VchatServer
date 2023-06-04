@@ -2,7 +2,6 @@ package com.example.vchatserver.message;
 
 import com.example.vchatserver.auth.Auth;
 import com.example.vchatserver.user.User;
-import io.swagger.models.auth.In;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
