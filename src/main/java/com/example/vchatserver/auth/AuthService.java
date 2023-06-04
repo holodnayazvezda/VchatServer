@@ -26,7 +26,6 @@ public class AuthService {
                     authorization.substring("Basic ".length()))).split(":");
             String username = credentials[0].toLowerCase();
             String password = credentials[1];
-
             CustomUserDetails user = customUserDetailsService.loadUserByUsername(username);
             if (user != null) {
                 if (passwordEncoder.matches(password, user.getUser().getPassword())) {
