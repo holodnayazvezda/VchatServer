@@ -53,6 +53,9 @@ public class UserService {
             throw new WrongPasswordException();
         } else if (createUserDto.getSecretWords().size() != 5) {
             throw new WrongSecretKeysException();
+        } else if (createUserDto.getTypeOfImage() != 1 &&
+                   createUserDto.getTypeOfImage() != 2) {
+            throw new WrongDataException();
         } else {
             User user = new User();
             user.setName(createUserDto.getName());
