@@ -50,7 +50,6 @@ public class User {
     private String imageData;
 
     @Getter @Setter
-    @NonNull
     private int typeOfImage;
 
     @Override

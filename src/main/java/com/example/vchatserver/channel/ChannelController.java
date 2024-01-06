@@ -1,15 +1,11 @@
 package com.example.vchatserver.channel;
 
 import com.example.vchatserver.auth.Auth;
-import com.example.vchatserver.group.Group;
-import com.example.vchatserver.message.Message;
 import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 public class ChannelController {
